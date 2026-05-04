@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Social Media Impact</title>
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+}
+</style>
+<header>
+    <h1>SM Impact</h1>
+
+</head>
+    <style>
+header {
+    background: #21283d;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1 {
+    margin-left: 50px;
+}
+   
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+</style>
+<body>
+
+<!-- Hamburger -->
+<div class="menu-btn" id="menuBtn">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+
+
+<!-- Navigation -->
+<div class="nav" id="nav">
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Contact</a>
+</div>
+
+<style>
+    /* Hamburger Icon */
+.menu-btn {
+  width: 25px;
+  position: fixed;
+  top: 15px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu-btn span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #06030a;
+  margin: 6px 0;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+
+/* Animation (X shape) */
+.menu-btn.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Side Menu */
+.nav {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #111;
+  padding-top: 60px;
+  transition: 0.4s;
+}
+
+.nav a {
+  display: block;
+  color: white;
+  padding: 15px 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  background: #575757;
+}
+.nav.active {
+  left: 0;
+}
+</style>
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const nav = document.getElementById("nav");
+
+menuBtn.addEventListener("click", () => {
+  menuBtn.classList.toggle("active");
+  nav.classList.toggle("active");
+});
+</script>
+
+</body>
+</header>
+
+
+<!-- HERO -->
+<div class="hero">
+    <p>DIGITAL EVOLUTION</p>
+    <h2>The Impact of<br><span>Social media</span><br>On society.</h2>
+    <p>Understanding how social media affects our daily life<br>Exploring the positive and negative effects of social media in our daily life and its influence on morden society.</p>
+    <button id="exploreBtn" class="explore-btn">
+  Explore More ⬇️
+</button>
+
+<div id="moreContent" class="content">
+  <div class="card">
+    <h3>✅ Positive Effects</h3>
+    <ul>
+      <li>Better communication</li>
+      <li>Online learning resources</li>
+      <li>Improves creativity</li>
+    </ul>
+  </div>
+<style>
+    /* HERO */
+
+.hero{
+    padding: 80px 40px;
+    background: linear-gradient(to right, #8f8f90, #aee2eb);
+}
+.tag {
+    letter-spacing: 3px;
+    color: rgb(22,21,21);
+    margin-bottom: 15px;
+}
+.hero h1{
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.hero span{
+    color:rgb(173,24,24);
+    font-style: italic;
+}
+.hero p{
+    color: #181717;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    font-style: oblique;
+}
+.explore-btn {
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  background: linear-gradient(45deg, #007bff, #00d4ff);
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.explore-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Content hidden with animation */
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  margin-top: 20px;
+}
+
+/* Active state */
+.content.show {
+  max-height: 500px;
+}
+</style>
+  <div class="card">
+    <h3>⚠️ Negative Effects</h3>
+    <ul>
+      <li>Distraction from studies</li>
+      <li>Addiction</li>
+      <li>Mental stress</li>
+    </ul>
+    <style>
+        /* Cards */
+.card {
+  background: #f5f5f5;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+    </style>
+    <script>
+    const btn = document.getElementById("exploreBtn");
+const content = document.getElementById("moreContent");
+
+btn.addEventListener("click", () => {
+  content.classList.toggle("show");
+
+  if (content.classList.contains("show")) {
+    btn.innerText = "Show Less ⬆️";
+  } else {
+    btn.innerText = "Explore More ⬇️";
+  }
+});
+</script>
+  </div>
+</div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="section light">
+    
+        <h2>About Social Media</h2>
+        <p>
+                       Social media refers to digital platforms and apps that allow people to create, share, and interact with content online. Popular platforms like Facebook, Instagram, X, and WhatsApp help users connect with friends, family, and communities around the world.
+It is widely used for communication, entertainment, education, business promotion, and news sharing. People can post photos, videos, messages, and ideas, and interact through likes, comments, and shares.
+Social media has many advantages, such as easy communication, access to information, and opportunities for learning and creativity. However, it also has disadvantages like addiction, distraction from studies, spread of misinformation, and negative effects on mental health if not used carefully.
+In simple terms, social media is a powerful tool that connects people globally, but it should be used in a balanced and responsible way.
+        </p>
+   
+</section>
+
+<!-- IMPACT -->
+<section id="impact">
+    <div class="container">
+        <h2>Positive & Negative Impact</h2>
+
+
+        <div class="cards">
+            <div class="card">
+                <h3>✅ Positive</h3>
+                <p>✔ Easy Communication worldwide<br>✔ Learning<br>✔ Business & Marketing Growth<br>✔ Awarness and Social change</p>
+            </div>
+
+            <div class="card">
+                <h3>⚠️ Negative</h3>
+                <p>✖ Addiction<br>✖ Mental Health Issues<br>✖ Privacy Risks<br>✖ Fake news spreading<br>✖ Cyberbullying</p> 
+            </div>
+        </div>
+    </div>
+    </section>
+    <section id="students" class="section light">
+        <h2>Impact on Student</h2>
+        <p>Social media has both positive and negative effects on students. On the positive side, it helps in communication, sharing knowledge, online learning, and staying updated with current events. Students can join educational groups, access study materials, and improve their creativity.
+However, excessive use can lead to distractions, reduced academic performance, and addiction. It may also affect mental health, causing stress, anxiety, and low self-esteem due to constant comparison with others.
+In conclusion, social media is useful when used wisely, but students should maintain a balance to avoid its negative effects.</p>
+
+    </section>
+</section>
+<style>
+    /* SECTIONS */
+section {
+    padding: 40px 20px;
+    text-align: left;
+}
+.section h2{
+margin-top: 10px;
+text-align: left;
+}
+.section p{
+margin-top: 10px;
+text-align:left;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+</style>
+<!-- CHARTS -->
+<section id="charts">
+    <div class="container">
+        <h2>Social Media Usage</h2>
+        <canvas id="barChart"></canvas>
+
+        <h2>User Impact Analysis</h2>
+        <canvas id="pieChart"></canvas>
+    </div>
+    <style>
+/* CHART */
+canvas {
+    max-width: 100%;
+    margin-top: 20px;
+}
+    </style>
+    <script>
+        
+// BAR CHART
+const barCtx = document.getElementById('barChart').getContext('2d');
+new Chart(barCtx, {
+    type: 'bar',
+    data: {
+        labels: ['Instagram','Facebook', 'YouTube','Snapchat', 'Twitter','whatsapp','telegram'],
+        datasets: [{
+            label: 'Usage percentage (%)',
+            data: [90,70,50,40,30,20,10],
+            backgroundColor: ['dark blue', 'pink', 'red', 'skyblue','gray','pink','green']
+        }]
+    }
+});
+
+// PIE CHART
+const pieCtx = document.getElementById('pieChart').getContext('2d');
+new Chart(pieCtx, {
+    type: 'pie',
+    data: {
+        labels: ['Positive', 'Negative'],
+        datasets: [{
+            data: [70, 30],
+            backgroundColor: ['green', 'red']
+        }]
+    }
+});
+
+function addComment() {
+    let name = document.getElementById("name").value;
+    let comment = document.getElementById("comment").value;
+
+    if(name === "" || comment === "") {
+        alert("Please fill all fields");
+        return;
+    }
+
+    let div = document.createElement("div");
+    div.className = "comment";
+
+    let initial = name.charAt(0).toUpperCase();
+
+    div.innerHTML = `
+        <div class="avatar">${initial}</div>
+        <div>
+            <strong>${name}</strong><br>
+            <small>${new Date().toLocaleString()}</small>
+            <p>${comment}</p>
+        </div>
+    `;
+
+    document.getElementById("commentList").prepend(div);
+
+    document.getElementById("name").value = "";
+    document.getElementById("comment").value = "";
+}
+
+    </script>
+</section>
+
+<div class="container">
+
+    <div class="title">Share Your Thoughts</div>
+<style>
+    /* MAIN */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+/* TITLE */
+.title {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+</style>
+    <!-- FORM -->
+    <div class="form-box">
+        <input type="text" id="name" placeholder="Your Name">
+        <textarea id="comment" placeholder="Your Comment"></textarea>
+        <button onclick="addComment()">Post Comment</button>
+        <div style="clear:both;"></div>
+    </div>
+<style>
+        /* FORM BOX */
+.form-box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+input, textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    margin: 15px 0;
+    font-size: 16px;
+    outline: none;
+}
+
+button {
+    background: #6b7280;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-language-override: normal;
+}
+</style>
+
+    <!-- COMMENTS -->
+    <div class="comments">
+        <h3>Recent Contributions</h3>
+        <div id="commentList"></div>
+    </div>
+    <style>
+        /* COMMENTS */
+.comments {
+    margin-top: 40px;
+    font-style:Arial, sans-serif;
+}
+
+.comment {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background: rgb(235, 27, 61);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+}
+    </style>
+
+    <!-- SUBSCRIBE -->
+    <div class="subscribe">
+        <h2>Stay Informed</h2>
+        <p>Join our mailing list for updates</p>
+        <input type="email" placeholder="Enter your email">
+        <button>➜</button>
+    </div>
+<style>
+    /* SUBSCRIBE */
+.subscribe {
+    margin-top: 60px;
+    background: #e6d3a3;
+    padding: 50px 20px;
+    text-align: center;
+}
+.subscribe p{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.subscribe h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.subscribe input {
+    text-align: center;
+    width: 300px;
+    border-radius: 25px;
+    padding: 10px;
+    border: none;
+}
+
+.subscribe button {
+    border-radius: 50%;
+    padding: 10px 15px;
+   margin-right: 20px;
+}
+</style>
+</div>
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Social Media Project  || Designed for Educational purposes only</p>
+    
+</footer>
+<style>
+    /* FOOTER */
+footer {
+    background: #3e4968;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+</style>
+
+</body>
+</html>
